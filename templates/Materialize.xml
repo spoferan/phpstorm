@@ -1,0 +1,186 @@
+<templateSet group="Materialize">
+  <template name="checkboxinput" value="&lt;div class=&quot;input-field $width$&quot;&gt;&#10;    &lt;input type=&quot;checkbox&quot; name=&quot;$name$&quot; id=&quot;$name$-input&quot; {{ empty(old('$name$')) || old('$name$') ? 'checked' : '' }} /&gt;&#10;    &lt;label for=&quot;$name$-input&quot;&gt;{{ trans('input.$name$.label') }}&lt;/label&gt;&#10;&lt;/div&gt;" description="CheckBox Input Field" toReformat="true" toShortenFQNames="true">
+    <variable name="width" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="name" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="HTML" value="true" />
+      <option name="PHP" value="true" />
+    </context>
+  </template>
+  <template name="card" value="&lt;div id=&quot;$id$&quot; class=&quot;card&quot;&gt;&#10;    &lt;div class=&quot;card-content&quot;&gt;&#10;        &lt;div class=&quot;card-header&quot;&gt;&#10;            &lt;i class=&quot;{{ config('icons.$name$.class') }}&quot;&gt;{{ config('icons.$name$.text') }}&lt;/i&gt;&#10;            &lt;h5 class=&quot;title&quot;&gt;$title$&lt;/h5&gt;&#10;        &lt;/div&gt;&#10;        &lt;div class=&quot;card-info&quot;&gt;&#10;            &lt;p class=&quot;title&quot;&gt;&lt;/p&gt;&#10;        &lt;/div&gt;&#10;        &lt;div class=&quot;card-action&quot;&gt;&#10;            &lt;a href=&quot;#&quot; class=&quot;btn-small waves-effect waves-light&quot;&gt;&#10;                Send&#10;            &lt;/a&gt;&#10;        &lt;/div&gt;&#10;    &lt;/div&gt;&#10;&lt;/div&gt;" description="Creates a card div" toReformat="false" toShortenFQNames="true">
+    <variable name="id" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="name" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="title" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="HTML" value="true" />
+      <option name="PHP" value="true" />
+    </context>
+  </template>
+  <template name="countryinput" value="&lt;div class=&quot;input-field $width$&quot;&gt;&#10;    &lt;select name=&quot;$name$&quot; id=&quot;$name$-input&quot; class=&quot;validate_true {{ $errors-&gt;has('$name$') ? 'invalid' : '' }}&quot;&gt;&#10;        &lt;option value=&quot;&quot; disabled {{ empty(old('$name$'))  ? 'selected' : '' }}&gt;{{ trans('input.$name$.default') }}&lt;/option&gt;&#10;        @foreach(Country::all() as $country =&gt; $code)&#10;            &lt;option value=&quot;{{ $country }}&quot; {{ old('$name$') == $country ? 'selected' : '' }}&gt;{{ $country }}&lt;/option&gt;&#10;        @endforeach&#10;    &lt;/select&gt;&#10;    &lt;label for=&quot;country-input&quot; data-error=&quot;{{ $errors-&gt;first('$name$') }}&quot;&gt;{{ trans('input.$name$.label') }}&lt;/label&gt;&#10;&lt;/div&gt;" description="Country Input Field" toReformat="true" toShortenFQNames="true">
+    <variable name="width" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="name" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="HTML" value="true" />
+      <option name="PHP" value="true" />
+    </context>
+  </template>
+  <template name="dateinput" value="&lt;div class=&quot;input-field $width$ date-group&quot;&gt;&#10;    &lt;input type=&quot;hidden&quot;&#10;           name=&quot;$name$&quot;&#10;           value=&quot;{{ old('$name$') }}&quot;/&gt;&#10;    &lt;input id=&quot;$name$-input&quot;&#10;           type=&quot;text&quot;&#10;           name=&quot;input-$name$&quot;&#10;           value=&quot;{{ old('input-$name$') }}&quot;&#10;           class=&quot;datepicker validate_true {{ $errors-&gt;has('$name$') ? 'invalid' : '' }}&quot; &gt;&#10;    &lt;label for=&quot;$name$-input&quot;&#10;           data-error=&quot;{{ $errors-&gt;first('$name$') }}&quot;&gt;&#10;        {{ trans('input.$name$.label') }}&#10;    &lt;/label&gt;&#10;&lt;/div&gt;" description="Date Input Field" toReformat="false" toShortenFQNames="true">
+    <variable name="width" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="name" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="HTML" value="true" />
+      <option name="PHP" value="true" />
+    </context>
+  </template>
+  <template name="datetimeinput" value="&lt;div class=&quot;datetime-group&quot;&gt;&#10;    &lt;div class=&quot;input-field $width$&quot;&gt;&#10;        &lt;input type=&quot;hidden&quot; name=&quot;$name$&quot; /&gt;&#10;        &lt;input id=&quot;$name$-date-input&quot; type=&quot;text&quot; name=&quot;$name$-date-input&quot; value=&quot;{{ old('$name$-date-input') }}&quot; class=&quot;datepicker validate_true {{ $errors-&gt;has('$name$') ? 'invalid' : '' }}&quot; &gt;&#10;        &lt;label for=&quot;$name$-date-input&quot; data-error=&quot;{{ $errors-&gt;first('$name$') }}&quot;&gt;{{ trans('input.$name$.date.label') }}&lt;/label&gt;&#10;    &lt;/div&gt;&#10;    &lt;div class=&quot;input-field col $width$&quot;&gt;&#10;        &lt;input id=&quot;$name$-time-input&quot; type=&quot;text&quot; name=&quot;$name$-time-input&quot; value=&quot;{{ old('$name$-time-input') }}&quot; class=&quot;timepicker validate_true {{ $errors-&gt;has('$name$') ? 'invalid' : '' }}&quot; &gt;&#10;        &lt;label for=&quot;$name$-time-input&quot;&gt;{{ trans('input.$name$.time.label') }}&lt;/label&gt;&#10;    &lt;/div&gt;&#10;&lt;/div&gt;" description="DateTime Input Field" toReformat="false" toShortenFQNames="true">
+    <variable name="width" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="name" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="HTML" value="true" />
+      <option name="PHP" value="true" />
+    </context>
+  </template>
+  <template name="formsection" value="&lt;div class=&quot;form-section&quot;&gt;&#10;    &lt;h5&gt;{{ trans('input.$name$.label') }}&lt;/h5&gt;&#10;    &lt;p class=&quot;description&quot;&gt;{{ trans('input.$name$.description') }}&lt;/p&gt;&#10;    &lt;div class=&quot;switch&quot;&gt;&#10;        &lt;label&gt;&#10;            {{ trans('input.off') }}&#10;            &lt;input name=&quot;$name$&quot; type=&quot;checkbox&quot; {{ (!empty(old('$name$')) &amp;&amp; old('$name$') == true) $extra$ ? 'checked' : '' }} &gt;&#10;            &lt;span class=&quot;lever&quot;&gt;&lt;/span&gt;&#10;            {{ trans('input.on') }}&#10;        &lt;/label&gt;&#10;    &lt;/div&gt;&#10;&lt;/div&gt;" description="Form Section With Switch Input" toReformat="false" toShortenFQNames="true">
+    <variable name="name" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="extra" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="HTML" value="true" />
+      <option name="PHP" value="true" />
+    </context>
+  </template>
+  <template name="limitedtextareainput" value="&lt;div class=&quot;input-field $width$&quot;&gt;&#10;  &lt;textarea id=&quot;$name$-input&quot; name=&quot;$name$&quot; class=&quot;materialize-textarea validate {{ $errors-&gt;has('$name$') ? 'invalid' : '' }}&quot; length=&quot;{{ config('validation.$name$_length_max') }}&quot;&gt;{{ old('$name$') }}&lt;/textarea&gt;&#10;  &lt;label for=&quot;$name$-input&quot; data-error=&quot;{{ $errors-&gt;first('$name$') }}&quot;&gt;{{ trans('input.$name$.label') }}&lt;/label&gt;&#10;&lt;/div&gt;" description="TextArea Input Field With A Length Declaration" toReformat="false" toShortenFQNames="true">
+    <variable name="width" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="name" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="HTML" value="true" />
+      <option name="PHP" value="true" />
+    </context>
+  </template>
+  <template name="limitedtextinput" value="&lt;div class=&quot;input-field $width$&quot;&gt;&#10;    &lt;input id=&quot;$name$-input&quot; type=&quot;$type$&quot; name=&quot;$name$&quot; value=&quot;{{ old('$name$') }}&quot; class=&quot;validate {{ $errors-&gt;has('$name$') ? 'invalid' : '' }}&quot; length=&quot;{{ config('validation.$name$_length_max') }}&quot;&gt;&#10;    &lt;label for=&quot;$name$-input&quot; data-error=&quot;{{ $errors-&gt;first('$name$') }}&quot;&gt;{{ trans('input.$name$.label') }}&lt;/label&gt;&#10;&lt;/div&gt;" description="Text Input Field With A Length Declaration" toReformat="true" toShortenFQNames="true">
+    <variable name="width" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="name" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="type" expression="" defaultValue="text" alwaysStopAt="true" />
+    <context>
+      <option name="HTML" value="true" />
+      <option name="PHP" value="true" />
+    </context>
+  </template>
+  <template name="limitedtextinputhelp" value="&lt;div class=&quot;input-field $width$&quot;&gt;&#10;    &lt;input id=&quot;$name$-input&quot; type=&quot;$type$&quot; name=&quot;$name$&quot; value=&quot;{{ old('$name$') }}&quot; class=&quot;validate {{ $errors-&gt;has('$name$') ? 'invalid' : '' }}&quot; length=&quot;{{ config('validation.$name$_length_max') }}&quot;&gt;&#10;    &lt;label for=&quot;$name$-input&quot; data-error=&quot;{{ $errors-&gt;first('$name$') }}&quot;&gt;{{ trans('input.$name$.label') }}&lt;/label&gt;&#10;    &lt;i class=&quot;{{ config('icons.help.class') }} help tooltip&quot; data-tooltip=&quot;trans('input.$name$.description')&quot;&gt;{{ config('icons.help.text') }}&lt;/i&gt;&#10;&lt;/div&gt;" description="Text Input Field With A Length Declaration And Help" toReformat="true" toShortenFQNames="true">
+    <variable name="width" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="name" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="type" expression="" defaultValue="text" alwaysStopAt="true" />
+    <context>
+      <option name="HTML" value="true" />
+      <option name="PHP" value="true" />
+    </context>
+  </template>
+  <template name="limitedtextinputicon" value="&lt;div class=&quot;input-field $width$&quot;&gt;&#10;    &lt;i class=&quot;{{ config('icons.$name$.class') }} prefix&quot;&gt;{{ config('icons.$name$.text') }}&lt;/i&gt;&#10;    &lt;input id=&quot;$name$-input&quot; type=&quot;$type$&quot; name=&quot;$name$&quot; value=&quot;{{ old('$name$') }}&quot; class=&quot;validate {{ $errors-&gt;has('$name$') ? 'invalid' : '' }}&quot; length=&quot;{{ config('validation.$name$_length_max') }}&quot;&gt;&#10;    &lt;label for=&quot;$name$-input&quot; data-error=&quot;{{ $errors-&gt;first('$name$') }}&quot;&gt;{{ trans('input.$name$.label') }}&lt;/label&gt;&#10;&lt;/div&gt;" description="Text Input Field With Icon And A Length Declaration" toReformat="true" toShortenFQNames="true">
+    <variable name="width" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="name" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="type" expression="" defaultValue="text" alwaysStopAt="true" />
+    <context>
+      <option name="HTML" value="true" />
+      <option name="PHP" value="true" />
+    </context>
+  </template>
+  <template name="inputhelp" value="&lt;i class=&quot;{{ config('icons.help.class') }} help tooltip&quot; data-tooltip=&quot;{{ trans('input.$name$.description') }}&quot;&gt;{{ config('icons.help.text') }}&lt;/i&gt;&#10;" description="Help Icon With Text For An Input Field" toReformat="false" toShortenFQNames="true">
+    <variable name="name" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="HTML" value="true" />
+      <option name="PHP" value="true" />
+    </context>
+  </template>
+  <template name="methodinput" value="&lt;input type=&quot;hidden&quot; name=&quot;_method&quot; value=&quot;$method$&quot;&gt;" description="Hidden Input Field To Simulate The Method" toReformat="false" toShortenFQNames="true">
+    <variable name="method" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="HTML" value="true" />
+      <option name="PHP" value="true" />
+    </context>
+  </template>
+  <template name="radioinput" value="&lt;p class=&quot;$width$&quot;&gt;&#10;    &lt;input name=&quot;$name$&quot; type=&quot;radio&quot; id=&quot;$name$-input&quot; class=&quot;with-gap&quot; /&gt;&#10;    &lt;label for=&quot;$name$-input&quot;&gt;{{ trans('input$trans$.$name$.label') }}&lt;/label&gt;&#10;&lt;/p&gt;" description="Radio Input Field" toReformat="false" toShortenFQNames="true">
+    <variable name="width" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="name" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="trans" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="HTML" value="true" />
+      <option name="PHP" value="true" />
+    </context>
+  </template>
+  <template name="selectinput" value="&lt;div class=&quot;input-field $width$&quot;&gt;&#10;    &lt;select name=&quot;$name$&quot; id=&quot;$name$-input&quot; class=&quot;validate_true {{ $errors-&gt;has('$name$') ? 'invalid' : '' }}&quot;&gt;&#10;        &lt;option value=&quot;&quot; disabled {{ empty(old('$name$')) ? 'selected' : '' }}&gt;{{ trans('input.$trans$.default') }}&lt;/option&gt;&#10;        @foreach($array$ as $field$)&#10;            &lt;option value=&quot;{{ $field$-&gt;id }}&quot; {{ old('$name$') == $field$-&gt;id ? 'selected' : '' }}&gt;{{ trans('db.$trans$.'.$field$-&gt;code) }}&lt;/option&gt;&#10;        @endforeach&#10;    &lt;/select&gt;&#10;    &lt;label for=&quot;$name$-input&quot; data-error=&quot;{{ $errors-&gt;first('$name$') }}&quot;&gt;{{ trans('input.$trans$.label') }}&lt;/label&gt;&#10;&lt;/div&gt;" description="Selection Input Field" toReformat="false" toShortenFQNames="true">
+    <variable name="width" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="name" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="array" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="field" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="trans" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="HTML" value="true" />
+      <option name="PHP" value="true" />
+    </context>
+  </template>
+  <template name="selectinputmultiple" value="&lt;div class=&quot;input-field $width$&quot;&gt;&#10;    &lt;select name=&quot;$name$[]&quot; id=&quot;$name$-input&quot; class=&quot;validate_true {{ $errors-&gt;has('$name$') ? 'invalid' : '' }}&quot;&gt;&#10;        @foreach($array$ as $field$)&#10;            &lt;option value=&quot;{{ $field$-&gt;id }}&quot; {{ !empty(old('$name$')) &amp;&amp; in_array($field$-&gt;id, old('$name$'))  ? &quot;selected&quot; : &quot;&quot; }}&gt;{{ trans('db.$trans$.'.$field$-&gt;code) }}&lt;/option&gt;&#10;        @endforeach&#10;    &lt;/select&gt;&#10;    &lt;label for=&quot;$name$-input&quot; data-error=&quot;{{ $errors-&gt;first('$name$') }}&quot;&gt;{{ trans('input.$trans$.label') }}&lt;/label&gt;&#10;&lt;/div&gt;" description="Mutliple Selection Input Field" toReformat="false" toShortenFQNames="true">
+    <variable name="width" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="name" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="array" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="field" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="trans" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="HTML" value="true" />
+      <option name="PHP" value="true" />
+    </context>
+  </template>
+  <template name="selectinputicon" value="&lt;div class=&quot;input-field $width$&quot;&gt;&#10;    &lt;select name=&quot;$name$&quot; id=&quot;$name$-input&quot; class=&quot;icons validate_true {{ $errors-&gt;has('$name$') ? 'invalid' : '' }}&quot;&gt;&#10;        &lt;option value=&quot;&quot; disabled {{ empty(old('$name$')) ? 'selected' : '' }}&gt;{{ trans('input.$trans$.default') }}&lt;/option&gt;&#10;        @foreach($array$ as $field$)&#10;            &lt;option value=&quot;{{ $field$-&gt;id }}&quot; data-icon=&quot;{{ $field$-&gt;icon }}&quot; class=&quot;left circle&quot; {{ old('$name$') == $field$-&gt;id ? 'selected' : '' }}&gt;{{ trans('db.$trans$.'.$field$-&gt;code) }}&lt;/option&gt;&#10;        @endforeach&#10;    &lt;/select&gt;&#10;    &lt;label for=&quot;$name$-input&quot; data-error=&quot;{{ $errors-&gt;first('$name$') }}&quot;&gt;{{ trans('input.$trans$.label') }}&lt;/label&gt;&#10;&lt;/div&gt;" description="Selection Input Field With Icon" toReformat="false" toShortenFQNames="true">
+    <variable name="width" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="name" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="array" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="field" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="trans" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="HTML" value="true" />
+      <option name="PHP" value="true" />
+    </context>
+  </template>
+  <template name="switchinput" value="&lt;div class=&quot;switch&quot;&gt;&#10;    &lt;label&gt;&#10;        {{ trans('input.off') }}&#10;        &lt;input name=&quot;$name$&quot; type=&quot;checkbox&quot; {{ empty(old('$name$')) || old('$name$') ? 'checked' : '' }} &gt;&#10;        &lt;span class=&quot;lever&quot;&gt;&lt;/span&gt;&#10;        {{ trans('input.on') }}&#10;    &lt;/label&gt;&#10;&lt;/div&gt;" description="Switch Input Field" toReformat="false" toShortenFQNames="true">
+    <variable name="name" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="HTML" value="true" />
+      <option name="PHP" value="true" />
+    </context>
+  </template>
+  <template name="textareainput" value="&lt;div class=&quot;input-field $width$&quot;&gt;&#10;    &lt;textarea id=&quot;$name$-input&quot; name=&quot;$name$&quot; class=&quot;materialize-textarea validate {{ $errors-&gt;has('$name$') ? 'invalid' : '' }}&quot;&gt;{{ old('$name$') }}&lt;/textarea&gt;&#10;    &lt;label for=&quot;$name$-input&quot; data-error=&quot;{{ $errors-&gt;first('$name$') }}&quot;&gt;{{ trans('input.$name$.label') }}&lt;/label&gt;&#10;&lt;/div&gt;" description="TextArea Input Field" toReformat="false" toShortenFQNames="true">
+    <variable name="width" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="name" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="HTML" value="true" />
+      <option name="PHP" value="true" />
+    </context>
+  </template>
+  <template name="textinput" value="&lt;div class=&quot;input-field $width$&quot;&gt;&#10;    &lt;input id=&quot;$name$-input&quot; type=&quot;$type$&quot; name=&quot;$name$&quot; value=&quot;{{ old('$name$') }}&quot; class=&quot;validate {{ $errors-&gt;has('$name$') ? 'invalid' : '' }}&quot;&gt;&#10;    &lt;label for=&quot;$name$-input&quot; data-error=&quot;{{ $errors-&gt;first('$name$') }}&quot;&gt;{{ trans('input.$name$.label') }}&lt;/label&gt;&#10;&lt;/div&gt;" description="Text Input Field" toReformat="true" toShortenFQNames="true">
+    <variable name="width" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="name" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="type" expression="" defaultValue="text" alwaysStopAt="true" />
+    <context>
+      <option name="HTML" value="true" />
+      <option name="PHP" value="true" />
+    </context>
+  </template>
+  <template name="textinputicon" value="&lt;div class=&quot;input-field $width$&quot;&gt;&#10;    &lt;i class=&quot;{{ config('icons.$name$.class') }} prefix&quot;&gt;{{ config('icons.$name$.text') }}&lt;/i&gt;&#10;    &lt;input id=&quot;$name$-input&quot; type=&quot;$type$&quot; name=&quot;$name$&quot; value=&quot;{{ old('$name$') }}&quot; class=&quot;validate {{ $errors-&gt;has('$name$') ? 'invalid' : '' }}&quot;&gt;&#10;    &lt;label for=&quot;$name$-input&quot; data-error=&quot;{{ $errors-&gt;first('$name$') }}&quot;&gt;{{ trans('input.$name$.label') }}&lt;/label&gt;&#10;&lt;/div&gt;" description="Text Input Field With Icon" toReformat="true" toShortenFQNames="true">
+    <variable name="width" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="name" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="type" expression="" defaultValue="text" alwaysStopAt="true" />
+    <context>
+      <option name="HTML" value="true" />
+      <option name="PHP" value="true" />
+    </context>
+  </template>
+  <template name="selectinputmultipleicon" value="&lt;div class=&quot;input-field $width$&quot;&gt;&#10;    &lt;select name=&quot;$name$[]&quot; id=&quot;$name$-input&quot; class=&quot;icons validate_true {{ $errors-&gt;has('$name$') ? 'invalid' : '' }}&quot;&gt;&#10;        @foreach($array$ as $field$)&#10;            &lt;option value=&quot;{{ $field$-&gt;id }}&quot; data-icon=&quot;{{ $field$-&gt;icon }}&quot; class=&quot;left circle&quot; {{ !empty(old('$name$')) &amp;&amp; in_array($field$-&gt;id, old('$name$'))  ? &quot;selected&quot; : &quot;&quot; }}&gt;{{ trans('db.$trans$.'.$field$-&gt;code) }}&lt;/option&gt;&#10;        @endforeach&#10;    &lt;/select&gt;&#10;    &lt;label for=&quot;$name$-input&quot; data-error=&quot;{{ $errors-&gt;first('$name$') }}&quot;&gt;{{ trans('input.$trans$.label') }}&lt;/label&gt;&#10;&lt;/div&gt;" description="Multiple Selection Input Field With Icon" toReformat="false" toShortenFQNames="true">
+    <variable name="width" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="name" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="array" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="field" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="trans" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="HTML" value="true" />
+      <option name="PHP" value="true" />
+    </context>
+  </template>
+</templateSet>
