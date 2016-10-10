@@ -1,0 +1,18 @@
+<templateSet group="user">
+  <template name="icon" value="&lt;i class=&quot;{{ config('icons.$name$.class') }}&quot;&gt;{{ config('icons.$name$.text') }}&lt;/i&gt;" description="Icon" toReformat="false" toShortenFQNames="true">
+    <variable name="name" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="HTML" value="true" />
+      <option name="PHP" value="true" />
+    </context>
+  </template>
+  <template name="deletebtn" value="&lt;form action={{ route('$route$', $param$) }} method=&quot;POST&quot;&gt;&#10;    &lt;input type=&quot;hidden&quot; name=&quot;_method&quot; value=&quot;DELETE&quot;&gt;&#10;    &lt;button type=&quot;submit&quot; class=&quot;btn-small btn-error&quot;&gt;&#10;        &lt;i class=&quot;{{ config('icons.destroy.class') }} left&quot;&gt;{{ config('icons.destroy.text') }}&lt;/i&gt;&#10;        {{ trans('action.destroy_$name$') }}&#10;    &lt;/button&gt;&#10;&lt;/form&gt;" description="Delete Form" toReformat="false" toShortenFQNames="true">
+    <variable name="route" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="param" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="name" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="HTML" value="true" />
+      <option name="PHP" value="true" />
+    </context>
+  </template>
+</templateSet>
