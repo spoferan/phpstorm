@@ -89,6 +89,28 @@
       </CLASSES>
       <SOURCES />
     </library>
+    <library name="prism" type="javaScript">
+      <properties>
+        <sourceFilesUrls>
+          <item url="file://$APPLICATION_CONFIG_DIR$/javascript/extLibs/http_cdnjs.cloudflare.com_ajax_libs_prism_1.5.1_prism.js" />
+        </sourceFilesUrls>
+      </properties>
+      <CLASSES>
+        <root url="file://$APPLICATION_CONFIG_DIR$/javascript/extLibs/http_cdnjs.cloudflare.com_ajax_libs_prism_1.5.1_prism.js" />
+      </CLASSES>
+      <SOURCES />
+    </library>
+    <library name="prism-php" type="javaScript">
+      <properties>
+        <sourceFilesUrls>
+          <item url="file://$APPLICATION_CONFIG_DIR$/javascript/extLibs/http_cdnjs.cloudflare.com_ajax_libs_prism_1.5.1_components_prism-php.js" />
+        </sourceFilesUrls>
+      </properties>
+      <CLASSES>
+        <root url="file://$APPLICATION_CONFIG_DIR$/javascript/extLibs/http_cdnjs.cloudflare.com_ajax_libs_prism_1.5.1_components_prism-php.js" />
+      </CLASSES>
+      <SOURCES />
+    </library>
     <library name="vue-resource" type="javaScript">
       <CLASSES>
         <root url="file://$APPLICATION_CONFIG_DIR$/javascript/extLibs/http_cdn.jsdelivr.net_vue.resource_0.9.3_vue-resource.min.js" />
