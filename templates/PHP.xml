@@ -21,26 +21,26 @@
   </template>
   <template name="require" value="require &quot;$END$&quot;;" description="'require' statement" toReformat="true" toShortenFQNames="true">
     <context>
-      <option name="PHP Statement" value="true" />
       <option name="PHP Expression" value="true" />
+      <option name="PHP Statement" value="true" />
     </context>
   </template>
   <template name="require_once" value="require_once &quot;$END$&quot;;" description="'require_once' statement" toReformat="true" toShortenFQNames="true">
     <context>
-      <option name="PHP Statement" value="true" />
       <option name="PHP Expression" value="true" />
+      <option name="PHP Statement" value="true" />
     </context>
   </template>
   <template name="include" value="include &quot;$END$&quot;;" description="'include' statement" toReformat="true" toShortenFQNames="true">
     <context>
-      <option name="PHP Statement" value="true" />
       <option name="PHP Expression" value="true" />
+      <option name="PHP Statement" value="true" />
     </context>
   </template>
   <template name="include_once" value="include_once &quot;$END$&quot;;" description="'include_once' statement" toReformat="true" toShortenFQNames="true">
     <context>
-      <option name="PHP Statement" value="true" />
       <option name="PHP Expression" value="true" />
+      <option name="PHP Statement" value="true" />
     </context>
   </template>
   <template name="pubf" value="public function $NAME$($PARAMETERS$) {&#10;    $END$&#10;}" description="public function" toReformat="true" toShortenFQNames="true">
