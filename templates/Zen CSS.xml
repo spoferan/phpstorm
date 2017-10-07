@@ -6,4 +6,10 @@
       <option name="CSS" value="true" />
     </context>
   </template>
+  <template name="comment" value="/*********************&#10;  $comment$&#10;**********************/" description="Comment" toReformat="false" toShortenFQNames="true">
+    <variable name="comment" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="CSS" value="true" />
+    </context>
+  </template>
 </templateSet>
