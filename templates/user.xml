@@ -1,5 +1,5 @@
 <templateSet group="user">
-  <template name="icon" value="&lt;i class=&quot;{{ config('icons.$name$.class') }}&quot;&gt;{{ config('icons.$name$.text') }}&lt;/i&gt;" description="Icon" toReformat="false" toShortenFQNames="true">
+  <template name="icon" value="&lt;icon icon=&quot;{{ config('icons.$name$') }}&quot;&gt;&lt;/icon&gt;" description="Icon" toReformat="false" toShortenFQNames="true">
     <variable name="name" expression="" defaultValue="" alwaysStopAt="true" />
     <context>
       <option name="HTML" value="true" />
