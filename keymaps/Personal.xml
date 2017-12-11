@@ -4,6 +4,7 @@
   </action>
   <action id="CopyPaths" />
   <action id="DatabaseView.CopyDdlAction" />
+  <action id="EditorJoinLines" />
   <action id="EditorMatchBrace" />
   <action id="FindInPath" />
   <action id="GotoClass">
@@ -14,5 +15,8 @@
   </action>
   <action id="GotoSymbol">
     <keyboard-shortcut first-keystroke="shift ctrl m" />
+  </action>
+  <action id="SelectAllOccurrences">
+    <keyboard-shortcut first-keystroke="shift ctrl j" />
   </action>
 </keymap>
