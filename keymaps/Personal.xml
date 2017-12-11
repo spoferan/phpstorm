@@ -1,4 +1,7 @@
 <keymap version="1" name="Personal" parent="$default">
+  <action id="ActivateDatabaseToolWindow">
+    <keyboard-shortcut first-keystroke="alt d" />
+  </action>
   <action id="CopyPaths" />
   <action id="DatabaseView.CopyDdlAction" />
   <action id="EditorMatchBrace" />
