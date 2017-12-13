@@ -9,6 +9,9 @@
   <action id="FileChooser.NewFolder">
     <keyboard-shortcut first-keystroke="alt insert" />
   </action>
+  <action id="FileStructurePopup">
+    <keyboard-shortcut first-keystroke="ctrl n" />
+  </action>
   <action id="FindInPath" />
   <action id="GotoChangedFile" />
   <action id="GotoClass">
@@ -21,7 +24,7 @@
     <keyboard-shortcut first-keystroke="shift ctrl m" />
   </action>
   <action id="NewElement">
-    <keyboard-shortcut first-keystroke="ctrl n" />
+    <keyboard-shortcut first-keystroke="alt c" />
   </action>
   <action id="RunClass">
     <keyboard-shortcut first-keystroke="ctrl f10" />
