@@ -6,7 +6,11 @@
   <action id="DatabaseView.CopyDdlAction" />
   <action id="EditorJoinLines" />
   <action id="EditorMatchBrace" />
+  <action id="FileChooser.NewFolder">
+    <keyboard-shortcut first-keystroke="alt insert" />
+  </action>
   <action id="FindInPath" />
+  <action id="GotoChangedFile" />
   <action id="GotoClass">
     <keyboard-shortcut first-keystroke="shift ctrl c" />
   </action>
@@ -16,6 +20,9 @@
   <action id="GotoSymbol">
     <keyboard-shortcut first-keystroke="shift ctrl m" />
   </action>
+  <action id="NewElement">
+    <keyboard-shortcut first-keystroke="ctrl n" />
+  </action>
   <action id="RunClass">
     <keyboard-shortcut first-keystroke="ctrl f10" />
   </action>
@@ -23,4 +30,7 @@
     <keyboard-shortcut first-keystroke="shift ctrl j" />
   </action>
   <action id="ShowExecutionPoint" />
+  <action id="ShowNavBar">
+    <keyboard-shortcut first-keystroke="alt n" />
+  </action>
 </keymap>
