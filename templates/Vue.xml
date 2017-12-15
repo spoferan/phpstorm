@@ -4,4 +4,10 @@
       <option name="Vue" value="true" />
     </context>
   </template>
+  <template name="deepwatch" value="watch: {&#10;    $prop$: {&#10;        handler: function($prop$) {&#10;            $END$&#10;        },&#10;        deep: true&#10;    }&#10;}," description="Deep Watch closure" toReformat="false" toShortenFQNames="true">
+    <variable name="prop" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="Vue" value="true" />
+    </context>
+  </template>
 </templateSet>

@@ -4,11 +4,6 @@
       <MessDetectorConfiguration />
     </phpmd_settings>
   </component>
-  <component name="PhpInterpreters">
-    <interpreters>
-      <interpreter home="C:\wamp64\bin\php\php7.1.9\php.exe" id="b11aa74d-d454-45fe-ad4a-e13d37910116" name="PHP7.1.9" debugger_id="php.debugger.XDebug" />
-    </interpreters>
-  </component>
   <component name="PhpInterpretersPhpInfoCache">
     <phpInfoCache>
       <interpreter name="PHP7.1.9">
