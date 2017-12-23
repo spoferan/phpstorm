@@ -2,6 +2,9 @@
   <action id="ActivateDatabaseToolWindow">
     <keyboard-shortcut first-keystroke="alt d" />
   </action>
+  <action id="CollapseAllRegions">
+    <keyboard-shortcut first-keystroke="shift ctrl subtract" />
+  </action>
   <action id="CopyPaths" />
   <action id="DatabaseView.CopyDdlAction" />
   <action id="EditorJoinLines" />
@@ -35,5 +38,11 @@
   <action id="ShowExecutionPoint" />
   <action id="ShowNavBar">
     <keyboard-shortcut first-keystroke="alt n" />
+  </action>
+  <action id="SplitVertically">
+    <keyboard-shortcut first-keystroke="shift ctrl plus" />
+  </action>
+  <action id="Unsplit">
+    <keyboard-shortcut first-keystroke="shift ctrl minus" />
   </action>
 </keymap>
