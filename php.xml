@@ -4,9 +4,14 @@
       <MessDetectorConfiguration />
     </phpmd_settings>
   </component>
+  <component name="PhpInterpreters">
+    <interpreters>
+      <interpreter home="C:\wamp64\bin\php\php7.1.9\php.exe" id="00e7894b-e4ef-45f9-9205-0b85e0d79f58" name="PHP 7.1" debugger_id="php.debugger.XDebug" />
+    </interpreters>
+  </component>
   <component name="PhpInterpretersPhpInfoCache">
     <phpInfoCache>
-      <interpreter name="PHP7.1.9">
+      <interpreter name="PHP 7.1">
         <phpinfo binary_type="PHP" php_cgi="C:\wamp64\bin\php\php7.1.9\php-cgi.exe" php_cli="C:\wamp64\bin\php\php7.1.9\php.exe" path_separator=";" version="7.1.9">
           <additional_php_ini />
           <configuration_file>C:\wamp64\bin\php\php7.1.9\php.ini</configuration_file>
@@ -30,7 +35,7 @@
             <configuration_option name="browscap" value="" />
             <configuration_option name="cli.pager" value="" />
             <configuration_option name="cli.prompt" value="\b \&gt; " />
-            <configuration_option name="curl.cainfo" value="" />
+            <configuration_option name="curl.cainfo" value="C:\wamp64\bin\php\cacert.pem" />
             <configuration_option name="date.default_latitude" value="31.7667" />
             <configuration_option name="date.default_longitude" value="35.2333" />
             <configuration_option name="date.sunrise_zenith" value="90.583333" />
