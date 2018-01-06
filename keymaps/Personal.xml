@@ -41,6 +41,9 @@
     <keyboard-shortcut first-keystroke="alt c" />
     <keyboard-shortcut first-keystroke="alt n" />
   </action>
+  <action id="Refactorings.QuickListPopupAction">
+    <keyboard-shortcut first-keystroke="ctrl alt r" />
+  </action>
   <action id="RenameElement">
     <keyboard-shortcut first-keystroke="shift f6" />
     <keyboard-shortcut first-keystroke="f2" />
