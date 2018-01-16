@@ -1,6 +1,6 @@
 <templateSet group="user">
-  <template name="icon" value="&lt;icon icon=&quot;{{ config('icons.$name$') }}&quot;&gt;&lt;/icon&gt;" description="Icon" toReformat="false" toShortenFQNames="true">
-    <variable name="name" expression="" defaultValue="" alwaysStopAt="true" />
+  <template name="icon" value="&lt;icon :icon=&quot;$icons.$icon$&quot;&gt;&lt;/icon&gt;" description="Icon" toReformat="false" toShortenFQNames="true">
+    <variable name="icon" expression="" defaultValue="" alwaysStopAt="true" />
     <context>
       <option name="HTML" value="true" />
       <option name="PHP" value="true" />
