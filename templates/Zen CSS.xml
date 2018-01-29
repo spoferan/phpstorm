@@ -12,4 +12,11 @@
       <option name="CSS" value="true" />
     </context>
   </template>
+  <template name="content" value="/* ==========================================================================&#10;   $NAME$&#10;   ========================================================================== */&#10;/**&#10; * Table of Contents:&#10; *&#10; *  1. General&#10; *  2. $HEADING$&#10; */&#10;&#10;/*********************&#10;  1. General&#10;**********************/&#10;&#10;&#10;/*********************&#10;  2. $HEADING$&#10;**********************/" description="" toReformat="false" toShortenFQNames="true">
+    <variable name="NAME" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="HEADING" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="CSS" value="true" />
+    </context>
+  </template>
 </templateSet>
