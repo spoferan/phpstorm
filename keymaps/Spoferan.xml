@@ -22,6 +22,7 @@
   <action id="DatabaseView.CopyDdlAction" />
   <action id="EditorJoinLines" />
   <action id="EditorMatchBrace" />
+  <action id="EditorScrollToCenter" />
   <action id="FileChooser.NewFolder">
     <keyboard-shortcut first-keystroke="alt insert" />
   </action>
@@ -29,6 +30,9 @@
     <keyboard-shortcut first-keystroke="ctrl n" />
   </action>
   <action id="FindInPath" />
+  <action id="Git.Merge">
+    <keyboard-shortcut first-keystroke="ctrl m" />
+  </action>
   <action id="GotoBookmark7" />
   <action id="GotoChangedFile" />
   <action id="GotoClass">
@@ -58,6 +62,7 @@
   <action id="RunClass">
     <keyboard-shortcut first-keystroke="ctrl f10" />
   </action>
+  <action id="ScrollTreeToCenter" />
   <action id="SelectAllOccurrences">
     <keyboard-shortcut first-keystroke="shift ctrl j" />
   </action>
@@ -74,5 +79,8 @@
   </action>
   <action id="UnsplitAll">
     <keyboard-shortcut first-keystroke="shift ctrl number_sign" />
+  </action>
+  <action id="Vcs.ShowMessageHistory">
+    <keyboard-shortcut first-keystroke="ctrl e" />
   </action>
 </keymap>
