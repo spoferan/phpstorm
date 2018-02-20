@@ -2,6 +2,7 @@
   <action id="ActivateDatabaseToolWindow">
     <keyboard-shortcut first-keystroke="alt d" />
   </action>
+  <action id="BaseOnThisFunction" />
   <action id="CollapseAllRegions">
     <keyboard-shortcut first-keystroke="shift ctrl subtract" />
   </action>
@@ -45,6 +46,9 @@
     <keyboard-shortcut first-keystroke="shift ctrl m" />
   </action>
   <action id="IntroduceConstant" />
+  <action id="LocalHistory.ShowHistory">
+    <keyboard-shortcut first-keystroke="ctrl h" />
+  </action>
   <action id="NewElement">
     <keyboard-shortcut first-keystroke="alt c" />
     <keyboard-shortcut first-keystroke="alt n" />
@@ -74,6 +78,8 @@
     <keyboard-shortcut first-keystroke="shift ctrl plus" />
   </action>
   <action id="ToggleBookmark7" />
+  <action id="TypeHierarchy" />
+  <action id="TypeHierarchyBase.BaseOnThisType" />
   <action id="Unsplit">
     <keyboard-shortcut first-keystroke="shift ctrl minus" />
   </action>
