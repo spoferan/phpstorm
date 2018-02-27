@@ -10,6 +10,10 @@
           <option name="url" value="https://github.com/EpicArrow/spoferan_blog.git" />
           <option name="userName" value="" />
         </UrlAndUserName>
+        <UrlAndUserName>
+          <option name="url" value="http://github.com/ferdinandfrank/spoferan.git" />
+          <option name="userName" value="ferdinandfrank" />
+        </UrlAndUserName>
       </list>
     </option>
     <option name="cloneParentDir" value="C:\Users\ferdi\PhpstormProjects" />
