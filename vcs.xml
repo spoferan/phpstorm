@@ -14,6 +14,10 @@
           <option name="url" value="http://github.com/ferdinandfrank/spoferan.git" />
           <option name="userName" value="ferdinandfrank" />
         </UrlAndUserName>
+        <UrlAndUserName>
+          <option name="url" value="http://github.com/ferdinandfrank/vue-forms.git" />
+          <option name="userName" value="ferdinandfrank" />
+        </UrlAndUserName>
       </list>
     </option>
     <option name="cloneParentDir" value="C:\Users\ferdi\PhpstormProjects" />
